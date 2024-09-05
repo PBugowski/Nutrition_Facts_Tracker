@@ -1,0 +1,16 @@
+{% extends "base_html.html" %}
+
+{% block content %}
+    Wartości odżywcze dla 100g produktu:
+    <ul>
+        <li>Nazwa Produktu: {{ product.product_name }}</li>
+        <li>Wartość energetyczna: {{ product.energy_value }}kcal</li>
+        <li>Białko: {{ product.proteins }}g</li>
+        <li>Tłuszcze: {{ product.total_fats }}g</li>
+        <li>W tym tłuszcze nasycone: {{ product.saturated_fats }}g</li>
+        <li>Węglowodany: {{ product.carbohydrates }}g</li>
+        <li>W tym cukry: {{ product.sugars }}g</li>
+        <li>Cholesterol: {{ product.cholesterol }}mg</li>
+        <li>Błonnik: {{ product.fiber }}g</li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,5 @@
+Django==5.0.6
+openai==1.35.8
+psycopg2-binary==2.9.9
+pytest==8.2.2
+pytest-django==4.8.0

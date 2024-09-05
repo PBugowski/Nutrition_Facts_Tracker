@@ -1,0 +1,11 @@
+{% extends "base_html.html" %}
+
+{% block content %}
+    {% include "base_form.html" %}
+    
+    {% if messages %}
+       {% for message in messages %}
+            <div class="{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

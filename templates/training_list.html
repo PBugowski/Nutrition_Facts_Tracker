@@ -1,0 +1,13 @@
+{% extends "base_html.html" %}
+
+{% block content %}
+<ul>
+    {% for training in training_list%}
+        <li>
+            {{ training.training_name }}
+            <a href="{% url 'training-details' training.id %}">Szczegóły</a>
+        </li>
+    {% endfor %}
+</ul>
+    
+{% endblock %}

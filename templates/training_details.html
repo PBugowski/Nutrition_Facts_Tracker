@@ -1,0 +1,23 @@
+{% extends "base_html.html" %}
+
+{% block content %}
+    <ul>
+        <li>Nazwa treningu: {{ training.training_name }} - {{ training.kcal_burnt }}kcal</li>
+        <li>Ćwiczenie 1: {{ training.exercise_1 }}</li>
+        <li>Serie: {{ training.exercise_1_sets }}, Powtórzenia: {{ training.exercise_1_reps }}</li>
+        <li>Opis ćwiczenia: {{ training.exercise_1_description }}</li>
+        <li>Ćwiczenie 2: {{ training.exercise_2 }}</li>
+        <li>Serie: {{ training.exercise_2_sets }}, Powtórzenia: {{ training.exercise_2_reps }}</li>
+        <li>Opis ćwiczenia: {{ training.exercise_2_description }}</li>
+        <li>Ćwiczenie 3: {{ training.exercise_3 }}</li>
+        <li>Serie: {{ training.exercise_3_sets }}, Powtórzenia: {{ training.exercise_3_reps }}</li>
+        <li>Opis ćwiczenia: {{ training.exercise_3_description }}</li>
+        <li>Ćwiczenie 4: {{ training.exercise_4 }}</li>
+        <li>Serie: {{ training.exercise_4_sets }}, Powtórzenia: {{ training.exercise_4_reps }}</li>
+        <li>Opis ćwiczenia: {{ training.exercise_4_description }}</li>
+        <li>Ćwiczenie 5: {{ training.exercise_5 }}</li>
+        <li>Serie: {{ training.exercise_5_sets }}, Powtórzenia: {{ training.exercise_5_reps }}</li>
+        <li>Opis ćwiczenia: {{ training.exercise_5_description }}</li>
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Nutrition</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <a href="/dashboard/">Strona główna</a>
+        <a href="/products/">Baza produktów</a>
+        <a href="/trainings/">Baza treningów</a>
+        <a href="/logout/">Wyloguj</a>
+        <a href="/profile/">Profil</a>
+        <a href="/add_product/">Dodaj produkt</a>
+        <a href="/add_meal/">Dodaj posiłek</a>
+        <a href="/add_plan/">Dodaj plan</a>
+        <a href="/add_training/">Dodaj trening</a>
+        <a href="/todays_goal/">Dzisiejszy cel</a>
+    {% else %}
+        <a href="/">O aplikacji</a>
+        <a href="/products/">Baza produktów</a>
+        <a href="/login/">Zaloguj</a>
+        <a href="/register/">Zarejestruj</a>
+    {% endif %}
+    
+{% block content %}
+{% endblock %}
+</body>
+</html>

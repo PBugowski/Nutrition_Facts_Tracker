@@ -1,0 +1,23 @@
+{% extends "base_html.html" %}
+
+{% block content %}
+    <ul>
+        <li>Nazwa użytkownika: {{ username }}</li>
+        <li>Adres email: {{ email }}</li>
+        <li>Imię: {{ first_name }}</li>
+        <li>Nazwisko: {{ last_name }}</li>
+        <li>Członek od: {{ date_joined|date:"d.m.Y G:i" }}</li>
+        {% if last_edition_date is not None %}
+            <li>Data ostatniej edycji: {{ last_edition_date|date:"d.m.Y G:i" }}</li>
+        {% else %}
+            <li>Data ostatniej edycji: Brak</li>
+        {% endif %}
+    </ul>
+    <a href="/edit_profile/">Edytuj profil</a>
+    
+    {% if messages %}
+       {% for message in messages %}
+            <div class="{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
